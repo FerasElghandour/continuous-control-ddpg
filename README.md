@@ -14,6 +14,8 @@ Actor–critic networks, shared replay across 20 agents, Ornstein–Uhlenbeck ex
 
 A new Pendulum-v1 path trains the released actor/critic with correct action scaling and time-limit handling. Three 30-episode runs retain validation-selected checkpoints, held-out returns and random/zero-action baselines. Multi-agent transition batches are validated before replay mutation.
 
+Longer-budget evidence: **-1037.88 mean return after 100 episodes per seed**, versus random -1203.13 and a task-aware controller -665.26. The mean improves over random, with substantial seed variation; the controller remains stronger. These are exploratory simulator comparisons, not legacy environment or real-robot results.
+
 [Commands, artifacts and benchmark scope](BENCHMARKS.md) · [Versioned profiles](reproduction.json)
 
 

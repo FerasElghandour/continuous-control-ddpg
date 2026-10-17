@@ -1,0 +1,123 @@
+{
+  "task": "Pendulum-v1",
+  "protocol": "Fixed task-aware controller on the same previously inspected rollout seeds; exploratory diagnostic, not untouched external evaluation",
+  "controller": "energy shaping gain 1; upright PD gains 10,3 at |angle|<0.25 and |velocity|<1",
+  "tuning": "Constants fixed before the first run; no fitting or search",
+  "information_advantage": "Pendulum controller uses known simulator mass, length, gravity and torque bound; RL learns without these dynamics",
+  "gymnasium": "1.4.0",
+  "numpy": "2.5.4",
+  "source_sha256": "2cfab9bbec9e1656fc045637ff1ae1bfe9e9346fe8b0f5b1c230527257b0737e",
+  "benchmark_sha256": "006bbb7f8bd5676e0d9583d26e0b14750afeb16fda6509f9ba7957e6cbdf52d7",
+  "groups": [
+    {
+      "training_seed_group": 0,
+      "rollout_seeds": [
+        2000000,
+        2000001,
+        2000002,
+        2000003,
+        2000004,
+        2000005,
+        2000006,
+        2000007,
+        2000008,
+        2000009
+      ],
+      "controller_returns": [
+        -740.7535695258854,
+        -745.904158075202,
+        -749.5791314925243,
+        -0.6836881744080192,
+        -742.5917527987513,
+        -752.6691165853252,
+        -0.4709916156153837,
+        -0.2964407670321111,
+        -744.5946192501219,
+        -740.8574808463392
+      ],
+      "mean_return": -521.8400949131205,
+      "rl_mean_return": -694.7458627392322,
+      "random_mean_return": -1062.941657324696,
+      "physics": {
+        "m": 1.0,
+        "g": 10.0,
+        "l": 1.0,
+        "max_torque": 2.0
+      }
+    },
+    {
+      "training_seed_group": 1,
+      "rollout_seeds": [
+        2000100,
+        2000101,
+        2000102,
+        2000103,
+        2000104,
+        2000105,
+        2000106,
+        2000107,
+        2000108,
+        2000109
+      ],
+      "controller_returns": [
+        -748.2545956499595,
+        -738.1145597000916,
+        -818.6750653915657,
+        -788.1773254917601,
+        -854.9652749215862,
+        -742.1692399572305,
+        -852.3601898470204,
+        -0.3722894164591501,
+        -746.9188311855069,
+        -744.935144337922
+      ],
+      "mean_return": -703.4942515899102,
+      "rl_mean_return": -1110.4005305993828,
+      "random_mean_return": -1261.8898302038199,
+      "physics": {
+        "m": 1.0,
+        "g": 10.0,
+        "l": 1.0,
+        "max_torque": 2.0
+      }
+    },
+    {
+      "training_seed_group": 2,
+      "rollout_seeds": [
+        2000200,
+        2000201,
+        2000202,
+        2000203,
+        2000204,
+        2000205,
+        2000206,
+        2000207,
+        2000208,
+        2000209
+      ],
+      "controller_returns": [
+        -799.5100031940136,
+        -845.6219192912038,
+        -768.9527760862643,
+        -750.3590011024119,
+        -818.5910610682662,
+        -748.4155947005929,
+        -740.2090657617239,
+        -746.1345546051708,
+        -745.619090032504,
+        -740.9390322426738
+      ],
+      "mean_return": -770.4352098084825,
+      "rl_mean_return": -1308.4944229778857,
+      "random_mean_return": -1284.569985852535,
+      "physics": {
+        "m": 1.0,
+        "g": 10.0,
+        "l": 1.0,
+        "max_torque": 2.0
+      }
+    }
+  ],
+  "mean_return": -665.2565187705044,
+  "std_across_seed_groups": 128.63310594802468
+}

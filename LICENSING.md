@@ -7,6 +7,7 @@ The root [MIT license](LICENSE) covers the original implementation and documenta
 - `reference-environment-macos.json`
 - `BENCHMARKS.md`
 - `test_algorithm.py`
+- `benchmark_controller.py`
 
 This grant covers these original contributions only. It does not relicense third-party source, dependencies, legacy notebooks, imported assets, environment binaries, datasets or model checkpoints. Existing copyright notices, attribution and upstream terms remain in effect. Files outside the list require checking their existing provenance and terms before reuse; this release asserts no new rights over them.
 

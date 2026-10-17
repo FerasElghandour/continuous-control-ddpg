@@ -1,0 +1,27 @@
+{
+  "source_commit": "ac8f1d076fd7b6e9b200a16ba8e4a6d1ca1c93e5",
+  "hardware": "Apple M2 Max, 96 GB unified memory",
+  "device": "cpu",
+  "commands": [
+    [
+      "python",
+      "train.py",
+      "--episodes",
+      "100",
+      "--seeds",
+      "0,1,2",
+      "--output",
+      "runs/extended"
+    ],
+    [
+      "python",
+      "benchmark_controller.py",
+      "--benchmark",
+      "runs/extended/benchmark.json",
+      "--output",
+      "runs/controller"
+    ]
+  ],
+  "scope": "Fixed longer budget after inspection of the shorter run; same rollout seeds reused. Exploratory budget diagnostic, not untouched independent validation. Controller constants fixed before its first rollout; no tuning search.",
+  "checkpoint_status": "All selected policy checkpoints reloaded and exactly reproduced each recorded fixed-seed return during the training command."
+}

@@ -1,6 +1,6 @@
 # Reproduction and benchmark scope
 
-A new Pendulum-v1 path trains the released actor/critic with correct action scaling and time-limit handling. Three30-episode runs retain validation-selected checkpoints, held-out returns and random/zero-action baselines. Multi-agent transition batches are validated before replay mutation.
+A new Pendulum-v1 path trains the released actor/critic with correct action scaling and time-limit handling. Three 30-episode runs retain validation-selected checkpoints, held-out returns and random/zero-action baselines. Multi-agent transition batches are validated before replay mutation.
 
 ## Execute a recorded profile
 
@@ -63,3 +63,23 @@ Published three-seed bounded Gymnasium budget; held-out rollout seeds and random
 ```
 
 The observed local runtime is recorded in [reference-environment-macos.json](reference-environment-macos.json). The reproduction driver hashes source files and inputs for each run. Published result records retain their own original runtime and revision; changing the device or budget creates a different experiment.
+
+## Longer-budget diagnostic and task-aware control baseline
+
+An additional fixed **100-episode × three-seed** run retains [all learning traces and returns](results/gymnasium-100/benchmark.json), selected checkpoints, [controller rollouts](results/gymnasium-100/controller.json) and [source revision/commands](results/gymnasium-100/protocol.json). Selection uses validation reset seeds only. Previously inspected final rollout seeds are reused: this is an exploratory budget extension, not untouched independent validation.
+
+| Policy | Mean return | Across training-seed groups |
+|---|---:|---:|
+| Released RL agent, 100 episodes | -1037.88 | sample SD 313.24 |
+| Random actions | -1203.13 | same reset seeds |
+| Fixed task-aware controller | -665.26 | same reset seeds |
+
+The longer DDPG run improves its mean over random, but variation is large and one training seed still underperforms random. It remains worse than the fixed energy-shaping/PD controller. This does not establish a robust Pendulum solution, a Reacher reproduction or physical safety.
+
+The fixed controller is a **task-aware engineering reference**, with a knowledge advantage over model-free learning. CartPole uses a declared linear switching rule; Pendulum uses known simulator physics for energy shaping and a fixed local PD region. All constants were fixed before the controller's first evaluation. They were not tuned against these returns. Input/action conventions follow [Gymnasium CartPole](https://gymnasium.farama.org/environments/classic_control/cart_pole/) and [Pendulum](https://gymnasium.farama.org/environments/classic_control/pendulum/). The complete implementation is in [benchmark_controller.py](benchmark_controller.py).
+
+```sh
+python train.py --episodes 100 --seeds 0,1,2 --output runs/extended
+python benchmark_controller.py --benchmark runs/extended/benchmark.json --output runs/controller
+python train.py --evaluate-checkpoint results/gymnasium-100/checkpoint-seed-0.pt --output runs/extended-reload
+```
