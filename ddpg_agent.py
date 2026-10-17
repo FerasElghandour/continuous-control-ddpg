@@ -192,10 +192,7 @@ class Agent:
 
     def _hard_update(self, local_model, target_model):
         """Copy weights from local → target (initialisation only)."""
-        for target_param, local_param in zip(
-            target_model.parameters(), local_model.parameters()
-        ):
-            target_param.data.copy_(local_param.data)
+        target_model.load_state_dict(local_model.state_dict(), strict=True)
 
 
 # ── Ornstein-Uhlenbeck Noise ───────────────────────────────────────────────────

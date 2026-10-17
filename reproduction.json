@@ -7,17 +7,34 @@
         [
           "{python}",
           "smoke_test.py"
+        ],
+        [
+          "{python}",
+          "test_algorithm.py"
         ]
       ]
     },
     "control-benchmark": {
-      "scope": "New named Gymnasium task; three training seeds and held-out rollout seeds; no Unity solve claim",
+      "scope": "Configurable Gymnasium benchmark with default 200-episode budget; distinct from the shorter published reference",
       "commands": [
         [
           "{python}",
           "train.py",
           "--output",
           "{output}/control"
+        ]
+      ]
+    },
+    "reference-control": {
+      "scope": "Published three-seed bounded Gymnasium budget; held-out rollout seeds and random/zero-action baselines; no Unity solve claim",
+      "commands": [
+        [
+          "{python}",
+          "train.py",
+          "--episodes",
+          "30",
+          "--output",
+          "{output}/reference-control"
         ]
       ]
     }

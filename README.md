@@ -12,7 +12,7 @@ Actor–critic networks, shared replay across 20 agents, Ornstein–Uhlenbeck ex
 
 ## Train the continuous-control agent
 
-A new Pendulum-v1 path trains the released actor/critic with correct action scaling and time-limit handling. Three30-episode runs retain validation-selected checkpoints, held-out returns and random/zero-action baselines. Multi-agent transition batches are validated before replay mutation.
+A new Pendulum-v1 path trains the released actor/critic with correct action scaling and time-limit handling. Three 30-episode runs retain validation-selected checkpoints, held-out returns and random/zero-action baselines. Multi-agent transition batches are validated before replay mutation.
 
 [Commands, artifacts and benchmark scope](BENCHMARKS.md) · [Versioned profiles](reproduction.json)
 
@@ -79,4 +79,8 @@ Run the focused offline behavior checks with `python smoke_test.py` after instal
 
 ## Limitations
 
-Unity environment binaries and trained weights are not included. Full reproduction requires the legacy Reacher environment and a compatible unityagents runtime; the modern CPU checks exercise the learning core independently.
+Legacy Unity Reacher binaries and Reacher-trained weights are not included. The separate Gymnasium Pendulum benchmark includes trained checkpoints and evaluation records. Full reproduction requires the legacy Reacher environment and a compatible unityagents runtime; the modern CPU checks exercise the learning core independently.
+
+## Reuse
+
+Original reproduction and validation tooling is available under MIT; see [LICENSING.md](LICENSING.md) for the explicit file scope and preserved upstream, dataset and checkpoint terms.
