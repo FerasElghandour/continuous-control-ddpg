@@ -86,7 +86,7 @@ python train.py --evaluate-checkpoint results/gymnasium-100/checkpoint-seed-0.pt
 
 ## Pinned local reference installation
 
-[requirements-reference-macos.txt](requirements-reference-macos.txt) pins the installed runtime/test dependency closure for Python 3.14.3 on macOS ARM64. It accompanies the observed environment record. It is a platform-specific reference snapshot, not a Linux/CUDA lock; a new empty-environment installation has not been independently certified. The GitHub checks use their separately declared Linux environment.
+[requirements-reference-macos.txt](requirements-reference-macos.txt) pins the installed runtime/test dependency closure for Python 3.14.3 on macOS ARM64. It accompanies the observed environment record. A new empty Python3.14.3 macOS environment installed these pinned dependencies, passed `pip check`, and passed all eight offline repository check profiles. [The validation record](environment-validation.json) binds the source revisions, Python source hashes, versions and outcomes. This is a platform-specific reference, not a Linux/CUDA lock or a repetition of every full dataset benchmark. The GitHub checks use their separately declared Linux environment.
 
 ```sh
 python3.14 -m venv .venv-reference

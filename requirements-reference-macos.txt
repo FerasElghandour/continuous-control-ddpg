@@ -1,6 +1,7 @@
 # Observed runtime/test dependency closure, Python 3.14.3, macOS arm64.
 # Captured from the environment used for these runs; not a Linux/CUDA lock.
-# No fresh empty-environment installation has been certified.
+# Fresh macOS installation and all eight offline check profiles passed.
+# Full data-training benchmarks were not repeated in this clean installation.
 cloudpickle==3.1.2
 farama-notifications==0.0.6
 filelock==4.2.0

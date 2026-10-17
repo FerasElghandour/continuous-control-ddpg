@@ -1,0 +1,247 @@
+{
+  "date": "2026-10-17",
+  "installation": "New Python3.14.3 virtual environment; pinned packages downloaded from the configured package index; no system-site-packages",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "requirements_sha256": "a4f50651e3fc0c03009ea97903e04c02b00b0ae050a8ccc055c59da863627f14",
+  "pip_check": "No broken requirements found",
+  "scope": "All eight offline check profiles passed in the fresh installation. This does not repeat every dataset benchmark or establish cross-platform numerical identity. Notebook and optional FID dependencies are excluded.",
+  "repositories": {
+    "navigation-double-dqn": {
+      "source_commit": "c8ead110c8ec70b75f827c9a0710d5ad96b58724",
+      "profile": "checks",
+      "status": "passed",
+      "elapsed_seconds": 3.141774957999587,
+      "python": "3.14.3",
+      "versions": {
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "pandas": "3.0.6",
+        "scikit-learn": "1.9.1",
+        "gymnasium": "1.4.0",
+        "pytest": "9.1.1"
+      },
+      "python_source_sha256": {
+        "smoke_test.py": "70cc645700cbc3d84ae5952b4405d22f27981975603d924c275ff0e3a1cfd10a",
+        "benchmark_training.py": "09d889839368ad79faa9aa0fc81ddb0f1edb1e389e4341b9a1a92045af54bc9c",
+        "run_reproduction.py": "ca2a595aee90a09e9761343b56a53149e6ce6cb09c637f7804d81781fc03c804",
+        "model.py": "679adde764638ef41a3aa36b46a14b9885d90086f80deac79940bfb347d301be",
+        "benchmark_controller.py": "2cfab9bbec9e1656fc045637ff1ae1bfe9e9346fe8b0f5b1c230527257b0737e",
+        "train.py": "7c5219a38321e6613f7386c4c595964479531177d086ec3bfd46972bd3e0b3a7",
+        "test_algorithm.py": "16f0286be9a9fc2e923db279aee0c8803094688499f2100f0b3af2a32aee52cb",
+        "Navigation.py": "eadfa4d2954cae27c5dd500eb017fd3b222d8e2413ea57011e6da7fae1471ef7",
+        "dqn_agent.py": "9bee79ca2b11929fa777bbf61d0b98f46fbbff1d74c3511a488e13f74aa01579",
+        "examples/quickstart.py": "b86286340288f5318275e63df6acb7cadbdefc9f5f1f8f67685c90d5e1e0d528",
+        "scripts/validate_source.py": "dd66863143395c7a5d2c2b8bb026d25a91f01f54a017aae51cdb7fb4741be750"
+      },
+      "reproduction_spec_sha256": "a649c9895199060024b7391ad11e4c9eed619d1765de8155b08133996b85cdca"
+    },
+    "continuous-control-ddpg": {
+      "source_commit": "d3f1f22f90aba130976ef51b904e0944a0c0be05",
+      "profile": "checks",
+      "status": "passed",
+      "elapsed_seconds": 3.100840999999491,
+      "python": "3.14.3",
+      "versions": {
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "pandas": "3.0.6",
+        "scikit-learn": "1.9.1",
+        "gymnasium": "1.4.0",
+        "pytest": "9.1.1"
+      },
+      "python_source_sha256": {
+        "smoke_test.py": "f035ab632813476b1e185702ac07fb093e41381ff364c9ee1973a10ede3d4324",
+        "benchmark_training.py": "09d889839368ad79faa9aa0fc81ddb0f1edb1e389e4341b9a1a92045af54bc9c",
+        "ddpg_agent.py": "714f95131394a3489816ef960e1707cf10bd369beeeaf674606e8231dfa2507a",
+        "run_reproduction.py": "ca2a595aee90a09e9761343b56a53149e6ce6cb09c637f7804d81781fc03c804",
+        "model.py": "82c999e9a49b937556a0246f55e9a6855d433b6a6405505920981bd569cb2b6e",
+        "benchmark_controller.py": "2cfab9bbec9e1656fc045637ff1ae1bfe9e9346fe8b0f5b1c230527257b0737e",
+        "train.py": "37cd1a1cc0828ab977f6d50fc81a016e31f157784faddac14390b37e65cda1d0",
+        "Continuous_Control.py": "5a80b72982cd86775d8dcc3a70dca44d551a7c89380dfbeb2b058af5ba260a76",
+        "test_algorithm.py": "429bbdf9c2fec2c9eb57b7a2c730d5d2471abafd319b5f23112ca402a17e5a3b",
+        "examples/quickstart.py": "8b0191264c8a34621cd0b858f953a63887b7b0c0a6167adfc235d10adb1e5509",
+        "scripts/validate_source.py": "dd66863143395c7a5d2c2b8bb026d25a91f01f54a017aae51cdb7fb4741be750"
+      },
+      "reproduction_spec_sha256": "5fa736b6c28f46c7bb6011d663279a7bb6d11002d125dd01305ecdebac33d7b4"
+    },
+    "conditional-handwriting-generation": {
+      "source_commit": "0de8fcb485334998a24ed8f92df40c1f14cb2566",
+      "profile": "checks",
+      "status": "passed",
+      "elapsed_seconds": 3.9498307920002844,
+      "python": "3.14.3",
+      "versions": {
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "pandas": "3.0.6",
+        "scikit-learn": "1.9.1",
+        "gymnasium": "1.4.0",
+        "pytest": "9.1.1"
+      },
+      "python_source_sha256": {
+        "smoke_test.py": "08ba03e4a588362bc543e0f96813b069343e879970d295b9b000b524113b0a31",
+        "run_reproduction.py": "ca2a595aee90a09e9761343b56a53149e6ce6cb09c637f7804d81781fc03c804",
+        "digit_models.py": "48199100289e9468e0fcf7da9d3f8a2d71e9eb93e852d00e5af4ee96c1bb34a2",
+        "test_resume.py": "d6bf7953eed881e3d7d4bf850581215066c881ad706217784a50a813feb6b79a",
+        "train.py": "30407d0739e54ed7c0457b1da4a41c8ef6cf680cacb3358e05f0efe8e918af83",
+        "sample.py": "c78cb76fda0595679c36bd070f6f3e92b3df57d2070b8c96c65434f915544591",
+        "test_restored_models.py": "c0e34cb5ff489a05633856e66a58beb736f1af24af44989e23fd38ec138d4d63",
+        "evaluate.py": "e96a3437dcbf4c6ae0126915ff81d30af1b056d4d50adb3ab8453daeb0e6aeb1",
+        "training/train_diffusion.py": "d37c2df4e0af9a87d188cde1595365567187f7cee8019ac82b23a3c32110be8a",
+        "training/session.py": "664046110138d92b6543a62d250a4bcbe0f40d991f17ea51b05d6f00af4d368f",
+        "training/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "training/train_cgan.py": "0cab2ad4061dfe7f7537853ca96fda955071ddb57cd5e33d70b9b340f846769f",
+        "utils/metrics.py": "8e4653c22720b94c40d6a703f1d65e9a452174973084aa1f85b0f85fe7303442",
+        "utils/checkpoint.py": "d7f1e3f434fd35dcd0cc4f440dffb4a9fa1d6f0997f506f211121e12dcc78565",
+        "utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "utils/visualize.py": "9ae57b02f8805bf54c26e2612acd556ddd354376946799bd1e5683d18dc5adc7",
+        "examples/quickstart.py": "893efc119f5668c2b3eea6363e2403527ef11c1a7a0d6996ee0bc927954381c9",
+        "model/diffusion.py": "5646cf9a4eb0a145f7261f94120477df62c0c2e96756d4dc414d1a6f6dd7aaa5",
+        "model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "model/cgan.py": "e8a37f2e3c17bc528f01afa7dfaf8bac5b6d870de6b05be6f80d0905aa534c8c"
+      },
+      "reproduction_spec_sha256": "8c35aad8290156a04cde175a669fbdfeee363b840d1700fbdf9a583fb35b1b23"
+    },
+    "cifar10-convolutional-classifier": {
+      "source_commit": "3f6d4ff7e22b0a63140c87ae62faf12d8ba4ec07",
+      "profile": "checks",
+      "status": "passed",
+      "elapsed_seconds": 4.82277895900188,
+      "python": "3.14.3",
+      "versions": {
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "pandas": "3.0.6",
+        "scikit-learn": "1.9.1",
+        "gymnasium": "1.4.0",
+        "pytest": "9.1.1"
+      },
+      "python_source_sha256": {
+        "smoke_test.py": "e1806c3747cacf489d3680ffe89dc43140de6701309313f92c04d86bde3f3f60",
+        "classifier.py": "92f59381944dc456ed82ab12321003c3e7a1554aab33817283a37e611c41f77b",
+        "prepare_data.py": "ade971280e0d8781992f7fccf8a0d4ce1ce9500f0cd90820138fbd8e0223283c",
+        "run_reproduction.py": "ca2a595aee90a09e9761343b56a53149e6ce6cb09c637f7804d81781fc03c804",
+        "predict.py": "1a484c6e0e81227c43b9c902a44fedf5bb27d68ea335404ef875b9203bfe066d",
+        "train.py": "2f411dc092c7b11b7acdb149ca9693614bc8ebb27658ae6bcd3040ea2c074ca3",
+        "test_training_pipeline.py": "930f4da6115da08c56c88bb94fc67cbb7cac109140c6f335ed14593a752b14fb",
+        "training.py": "ac0049a95be8508e4ba35ca104f3f52851cab6cab58f647f5bfd81dbf3e9b7b1",
+        "examples/quickstart.py": "22be6827e15233cf68c5e1b4316af8679afc8d8d521b65aaa23becbd90a849ea"
+      },
+      "reproduction_spec_sha256": "759f3b100831a49c37b8f0c72404ccfdd0f36f785fecc427c7f21093c99dfbf9"
+    },
+    "handwritten-digit-cnn-comparison": {
+      "source_commit": "6bfccafd99e8a15e4ec5572d549b627ae8582746",
+      "profile": "checks",
+      "status": "passed",
+      "elapsed_seconds": 4.1663843329988595,
+      "python": "3.14.3",
+      "versions": {
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "pandas": "3.0.6",
+        "scikit-learn": "1.9.1",
+        "gymnasium": "1.4.0",
+        "pytest": "9.1.1"
+      },
+      "python_source_sha256": {
+        "models.py": "57c01d1829be8c73b37ac0285e37cd23e93e775376f0f76f1754c09c66d992f4",
+        "reproduce.py": "1c79c12e8f5bbe6542786b294d1f1eccbd00a640c292b6974b94e9b27a9c680d",
+        "prepare_data.py": "05299f95160315941bac9dd8c2f8a771f261e8d5032bf0244f1afbcfac35b178",
+        "run_reproduction.py": "ca2a595aee90a09e9761343b56a53149e6ce6cb09c637f7804d81781fc03c804",
+        "train.py": "629a4c1e63445da2f2f08c7abdf0d744697bae2fba514d3629f41a5bb62316f2",
+        "analysis.inspection.py": "732236ffd93ce64383d7de8464c8b408dffda74933a697ce1ded585487458ac5",
+        "test_training_pipeline.py": "930f4da6115da08c56c88bb94fc67cbb7cac109140c6f335ed14593a752b14fb",
+        "analysis.ipynb": "e9ea51a4bfc60b337dd70d01cf690b587034fa3483cd758d38127a066154d99c",
+        "training.py": "dddf323a60fbf990f90fc95398f068fbb96afe4273a9331b3cb554788b84590e",
+        "examples/quickstart.py": "7c875c45662cc41b0522fd7f666ec91cb1faf0175cad040a659f8e3d3657c460",
+        "scripts/validate_source.py": "dd66863143395c7a5d2c2b8bb026d25a91f01f54a017aae51cdb7fb4741be750"
+      },
+      "reproduction_spec_sha256": "29e5dfc74eb29dba42331d6a7d8aeda116eff1b25b06d096ad6091d16899b305"
+    },
+    "sentiment-transformer-architecture": {
+      "source_commit": "f51168f6ff9d06a268218b6117a143cc5b069a79",
+      "profile": "checks",
+      "status": "passed",
+      "elapsed_seconds": 4.928458458001842,
+      "python": "3.14.3",
+      "versions": {
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "pandas": "3.0.6",
+        "scikit-learn": "1.9.1",
+        "gymnasium": "1.4.0",
+        "pytest": "9.1.1"
+      },
+      "python_source_sha256": {
+        "smoke_test.py": "f1e61b2e75003a4f74090db67fc9d8200406856600a8c6d70291f16cd5896138",
+        "prepare_data.py": "9290b3e2719a69231110b5df8b1af673984a6c002a6992dc2f8729b8925ed62e",
+        "run_reproduction.py": "ca2a595aee90a09e9761343b56a53149e6ce6cb09c637f7804d81781fc03c804",
+        "predict.py": "9e720813424a7310e6a3e7b3b1620bbc4343ac2fb8454b7a04f53ab22630ce5b",
+        "train.py": "4d61822ada8d71b4f18b1faaf876d14ce00dc7619ddfc538892553b7ec9a0060",
+        "test_training_pipeline.py": "ce14a5471330b6e4f312fcba12e5aa9429d756c19871771a6b1d2c7e2debadaf",
+        "sentiment_transformer.py": "059539921590c8d4d0b8c522d470da984ab6f22f71373a68cfa6c39ccf298f7d",
+        "training.py": "9752904eb0a217adebaf4b91135896403ee839d37f732b21df92429e07d85ad0",
+        "examples/quickstart.py": "65b0011c7c7ab0ab2197d01c3642ff23954800d18c9d4b26d10ab7542cf68a0c"
+      },
+      "reproduction_spec_sha256": "d9c680987d231340b7dd886a6bfb45f11229cbaea69fe5ae0fa6494240bcad9c"
+    },
+    "diabetes-risk-classification": {
+      "source_commit": "7f20997e398f57b7fde3ee874f5496fb08fb9710",
+      "profile": "checks",
+      "status": "passed",
+      "elapsed_seconds": 5.631370791998052,
+      "python": "3.14.3",
+      "versions": {
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "pandas": "3.0.6",
+        "scikit-learn": "1.9.1",
+        "gymnasium": "1.4.0",
+        "pytest": "9.1.1"
+      },
+      "python_source_sha256": {
+        "smoke_test.py": "166cdc174c1e7a80984e41f476f53a331dbb7a7823d8db9ed5fcac7dae9abbfc",
+        "prepare_data.py": "adabbdd78e124653d7a84293bce89c4b2efce93048112639bca910c16f550a2f",
+        "run_reproduction.py": "ca2a595aee90a09e9761343b56a53149e6ce6cb09c637f7804d81781fc03c804",
+        "predict.py": "d4c3a48bbbb7475185fee8d664f7ba5f202f529e0d80cd764e2730f0fc602e68",
+        "benchmark_baselines.py": "d14b5c44e3faa97818976dd5f2848cbbbe53f58fe9448026d6aff7dc72634576",
+        "train.py": "f138fe8eacefcd9c173c6bf836e0eeec6d2ba21d346eaf3a9e08b22bb6aeb220",
+        "risk_model.py": "33d7bc2cc3a22003851a8ec9c00bd9e6d75889c0204af45a76a0f799bbe95676",
+        "test_training_pipeline.py": "930f4da6115da08c56c88bb94fc67cbb7cac109140c6f335ed14593a752b14fb",
+        "test_thresholds.py": "a9f8389be0da06df72167e58ec02975bbab0c07677e14a3d68505695396596d2",
+        "training.py": "ac0049a95be8508e4ba35ca104f3f52851cab6cab58f647f5bfd81dbf3e9b7b1",
+        "examples/quickstart.py": "cade4f11ef7d250b3610bb226811f4c4fd65ba632b03a4808f72f2ab3be4bda6"
+      },
+      "reproduction_spec_sha256": "4842be4f4e1d3b51c8a1c0c5eb2e7b9c8596b45117256fc60b59dc7f6a94baeb"
+    },
+    "landmark-cnn-architecture": {
+      "source_commit": "879af154e86959f4547383b90f0a9f484ac5b6cb",
+      "profile": "checks",
+      "status": "passed",
+      "elapsed_seconds": 5.197233832997881,
+      "python": "3.14.3",
+      "versions": {
+        "numpy": "2.5.4",
+        "torch": "2.14.1",
+        "pandas": "3.0.6",
+        "scikit-learn": "1.9.1",
+        "gymnasium": "1.4.0",
+        "pytest": "9.1.1"
+      },
+      "python_source_sha256": {
+        "smoke_test.py": "f9024dc7a3a327a8afdca7299605142e5f7bb59ac26c2c75d8344f992dfc8ea8",
+        "prepare_data.py": "2e730e1fa9f6b837a22c86f14d963e552b692eb38b0a6eacc566cbdfd20d777d",
+        "run_reproduction.py": "ca2a595aee90a09e9761343b56a53149e6ce6cb09c637f7804d81781fc03c804",
+        "predict.py": "eeafc32bc894f58d553dc602d377fea5052b2694639f94b0982d8541f1f2580a",
+        "model.py": "aa411de28d1961409e998f3b420d565d6cf97524469d4b245fe3af456f1403eb",
+        "train.py": "3d7ca5a00ce26780c29cb06ec47cb75f2cb9d61a5faa5fba1fc47547fdd58040",
+        "test_training_pipeline.py": "930f4da6115da08c56c88bb94fc67cbb7cac109140c6f335ed14593a752b14fb",
+        "training.py": "ac0049a95be8508e4ba35ca104f3f52851cab6cab58f647f5bfd81dbf3e9b7b1",
+        "examples/quickstart.py": "c39084f4d5347d5f8aa06d23a4900964f4e96f28a724f949ac6702528a2f8298",
+        "scripts/validate_source.py": "dd66863143395c7a5d2c2b8bb026d25a91f01f54a017aae51cdb7fb4741be750"
+      },
+      "reproduction_spec_sha256": "187e49219706133c5e4e1ee50d1e9b7f5fc65cbff6ae6207f8152e88683a0c76"
+    }
+  }
+}
