@@ -1,0 +1,1 @@
+{"fixture": "untrained actor and generated transitions; no rollout", "actions": [[-0.06248923018574715, 0.07946766167879105], [-0.06248923018574715, 0.07946766167879105], [-0.06248923018574715, 0.07946766167879105]], "replay_size": 8, "actor_changed": true}

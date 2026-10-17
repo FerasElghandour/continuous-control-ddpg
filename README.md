@@ -1,7 +1,5 @@
 # Parallel Continuous Control with DDPG
 
-**Feras Elghandour** · Technical case study
-
 Control continuous robotic-arm actions while learning from experience shared across parallel simulated agents.
 
 ## Implementation
@@ -9,22 +7,55 @@ Control continuous robotic-arm actions while learning from experience shared acr
 Actor–critic networks, shared replay across 20 agents, Ornstein–Uhlenbeck exploration, deferred gradient updates, critic clipping, and soft target-network updates.
 
 ```mermaid
-flowchart LR
-    A[Input preparation] --> B[Implementation]
-    B --> C[Evaluation]
-    C --> D[Results and interpretation]
+flowchart TD
+    N0["State batch from parallel agents"] --> N1
+    N1["Local actor produces continuous actions"] --> N2
+    N2["Shared replay stores transitions"] --> N3
+    N3["Critic target uses target actor and critic"] --> N4
+    N4["Update local networks and softly update targets"]
+```
+
+## Try a small example
+
+Generated transitions exercise actor inference and one replay update. No simulator is launched and no control-policy performance is measured.
+
+After the local setup below, run from the repository root:
+
+```sh
+python examples/quickstart.py
+```
+
+The [example source](examples/quickstart.py), [captured output](examples/expected-output.txt) and [execution record](examples/environment.json) keep this demonstration inspectable. Floating-point values may vary with library versions.
+
+Observed output from this run:
+
+```text
+{
+  "fixture": "untrained actor and generated transitions; no rollout",
+  "actions": [
+    [
+      -0.06248923018574715,
+      0.07946766167879105
+    ],
+    [
+      -0.06248923018574715,
+      0.07946766167879105
+    ],
+    [
+      -0.06248923018574715,
+      0.07946766167879105
+    ]
+  ],
+  "replay_size": 8,
+  "actor_changed": true
+}
 ```
 
 ## Evidence and results
 
 The recovered implementation configures a 100-episode rolling score target of 30. The release tests action bounds, replay sampling, gradient updates, and target-network behavior. No numerical training reward is claimed without a recovered reward trace.
 
-Results described as saved come from the retained experiment record. See [VALIDATION.md](VALIDATION.md) for the checks performed on this release and their scope.
-
-## Practical relevance
-
-This project demonstrates actor–critic networks, shared replay across 20 agents, Ornstein–Uhlenbeck exploration, deferred gradient updates, critic clipping, and soft target-network updates.
-The implementation and evaluation make the trade-offs inspectable for technical review.
+See [VALIDATION.md](VALIDATION.md) for the release checks and their scope.
 
 ## Run locally
 
@@ -47,7 +78,3 @@ Run the focused offline behavior checks with `python smoke_test.py` after instal
 ## Limitations
 
 Unity environment binaries and trained weights are not included. Full reproduction requires the legacy Reacher environment and a compatible unityagents runtime; the modern CPU checks exercise the learning core independently.
-
-## Development
-
-Changes should include a clear description of the behavior affected and verification appropriate to that behavior. Keep input data, credentials, model caches, and generated artifacts outside version control.
