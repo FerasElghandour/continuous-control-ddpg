@@ -20,7 +20,7 @@ Supply named paths with `--input name=/absolute/path`. Exact commands are versio
 
 ## Evidence boundary
 
-The bounded runs underperform the random baseline. They are not a Reacher reproduction, real-robot result or control-safety validation.
+The original 30-episode runs underperform the random baseline. The 100-episode extension improves the overall mean over random, with substantial seed variation and weaker results than the task-aware controller below. They are not a Reacher reproduction, real-robot result or control-safety validation.
 
 Keep input acquisition and source credits in [DATA.md](DATA.md). Historical results, new reference runs and small contract fixtures have separate evidential scope.
 
