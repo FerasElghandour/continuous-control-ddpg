@@ -83,3 +83,14 @@ python train.py --episodes 100 --seeds 0,1,2 --output runs/extended
 python benchmark_controller.py --benchmark runs/extended/benchmark.json --output runs/controller
 python train.py --evaluate-checkpoint results/gymnasium-100/checkpoint-seed-0.pt --output runs/extended-reload
 ```
+
+## Pinned local reference installation
+
+[requirements-reference-macos.txt](requirements-reference-macos.txt) pins the installed runtime/test dependency closure for Python 3.14.3 on macOS ARM64. It accompanies the observed environment record. It is a platform-specific reference snapshot, not a Linux/CUDA lock; a new empty-environment installation has not been independently certified. The GitHub checks use their separately declared Linux environment.
+
+```sh
+python3.14 -m venv .venv-reference
+.venv-reference/bin/python -m pip install -r requirements-reference-macos.txt
+```
+
+Use the recorded exact Python patch version when comparing numerical results. Notebook tooling and optional FID dependencies are outside this runtime/test snapshot.
