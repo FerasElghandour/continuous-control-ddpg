@@ -1,0 +1,34 @@
+{
+  "repository": "continuous-control-ddpg",
+  "profiles": {
+    "checks": {
+      "scope": "Offline behavioral regressions; not a fresh dataset benchmark",
+      "commands": [
+        [
+          "{python}",
+          "smoke_test.py"
+        ]
+      ]
+    },
+    "control-benchmark": {
+      "scope": "New named Gymnasium task; three training seeds and held-out rollout seeds; no Unity solve claim",
+      "commands": [
+        [
+          "{python}",
+          "train.py",
+          "--output",
+          "{output}/control"
+        ]
+      ]
+    }
+  },
+  "version_packages": [
+    "numpy",
+    "torch",
+    "pandas",
+    "scikit-learn",
+    "gymnasium",
+    "pytest"
+  ],
+  "external_evidence_limits": "See BENCHMARKS.md and DATA.md. Passing contract checks does not certify historical accuracy, live providers, physical safety or business outcomes."
+}

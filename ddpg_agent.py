@@ -86,6 +86,11 @@ class Agent:
             next_states (np.array): (num_agents, state_size)
             dones       (list):     done flag per agent
         """
+        states, actions, rewards, next_states, dones = map(np.asarray, (states, actions, rewards, next_states, dones))
+        if states.shape != (self.num_agents,self.state_size) or next_states.shape != states.shape or actions.shape != (self.num_agents,self.action_size) or rewards.shape != (self.num_agents,) or dones.shape != (self.num_agents,):
+            raise ValueError('Aligned state/action/reward/terminal batches required')
+        if not all(np.isfinite(x).all() for x in (states,actions,rewards,next_states,dones)) or not np.isin(dones,[0,1]).all() or (np.abs(actions)>1).any():
+            raise ValueError('Finite normalized transitions and binary terminal flags required')
         # All agents add to the shared buffer
         for s, a, r, ns, d in zip(states, actions, rewards, next_states, dones):
             self.memory.add(s, a, r, ns, d)

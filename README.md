@@ -8,6 +8,15 @@ Actor–critic networks, shared replay across 20 agents, Ornstein–Uhlenbeck ex
 
 ![Implementation mechanism: State batch from parallel agents → Local actor produces continuous actions → Shared replay stores transitions → Critic target uses target actor and critic → Update local networks and softly update targets](assets/mechanism.svg)
 
+
+
+## Train the continuous-control agent
+
+A new Pendulum-v1 path trains the released actor/critic with correct action scaling and time-limit handling. Three30-episode runs retain validation-selected checkpoints, held-out returns and random/zero-action baselines. Multi-agent transition batches are validated before replay mutation.
+
+[Commands, artifacts and benchmark scope](BENCHMARKS.md) · [Versioned profiles](reproduction.json)
+
+
 ## Try a small example
 
 Generated transitions exercise actor inference and one replay update. No simulator is launched and no control-policy performance is measured.

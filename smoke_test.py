@@ -23,3 +23,10 @@ assert all(p.grad is None for p in agent.actor_target.parameters())
 a,b=OUNoise((3,2),8),OUNoise((3,2),8)
 assert np.array_equal(a.sample(),b.sample())
 print('DDPG: action bounds, replay ownership, finite learning, detached targets, and seeded exploration passed.')
+
+# Invalid multi-agent shapes must fail atomically before adding any transition.
+before_size=len(agent.memory)
+try:agent.step(np.zeros((3,8)),np.zeros((2,2)),np.zeros(3),np.zeros((3,8)),np.zeros(3))
+except ValueError:pass
+else:raise AssertionError('Mismatched transition batch accepted')
+assert len(agent.memory)==before_size
