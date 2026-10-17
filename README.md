@@ -6,14 +6,7 @@ Control continuous robotic-arm actions while learning from experience shared acr
 
 Actor–critic networks, shared replay across 20 agents, Ornstein–Uhlenbeck exploration, deferred gradient updates, critic clipping, and soft target-network updates.
 
-```mermaid
-flowchart TD
-    N0["State batch from parallel agents"] --> N1
-    N1["Local actor produces continuous actions"] --> N2
-    N2["Shared replay stores transitions"] --> N3
-    N3["Critic target uses target actor and critic"] --> N4
-    N4["Update local networks and softly update targets"]
-```
+![Implementation mechanism: State batch from parallel agents → Local actor produces continuous actions → Shared replay stores transitions → Critic target uses target actor and critic → Update local networks and softly update targets](assets/mechanism.svg)
 
 ## Try a small example
 
